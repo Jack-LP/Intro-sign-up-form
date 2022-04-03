@@ -1,0 +1,166 @@
+@import 'variables';
+@import 'mixins';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background: url(../images/bg-intro-mobile.png) fixed no-repeat center center
+    $red;
+  background-size: cover;
+  font-family: $bodyFont;
+  font-size: $bodySize;
+}
+
+.bold {
+  font-weight: $medWeight;
+  color: white;
+  font-weight: $heavyWeight;
+}
+
+.red-highlight {
+  color: $red;
+  cursor: pointer;
+}
+
+.invalid {
+  border: 0.1rem solid $red !important;
+}
+
+.container {
+  width: min(90%, 150rem);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 6rem;
+}
+
+.section-one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+  color: white;
+  gap: 2rem;
+}
+
+.section-two {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.try-card {
+  background-color: $blue;
+  color: $greyBlue;
+  padding: 1.6rem 5rem;
+  text-align: center;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.11);
+  box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.11);
+}
+
+.signup-form-section {
+  background-color: white;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.11);
+  box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.11);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  p {
+    font-size: 1.2rem;
+    color: $greyBlue;
+    text-align: center;
+    padding: 0 2rem;
+  }
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  input {
+    padding: 1.5rem 0 1.5rem 1.5rem;
+    font-family: $bodyFont;
+    border-radius: 0.5rem;
+    border: 0.1rem solid $greyBlue;
+    outline: none;
+    font-weight: $heavyWeight;
+    &[type='submit'] {
+      cursor: pointer;
+      background-color: $green;
+      color: white;
+      font-family: $bodyFont;
+      text-transform: uppercase;
+      font-weight: $medWeight;
+      letter-spacing: 0.1rem;
+      border: none;
+      transition: background-color 0.2s;
+      -webkit-box-shadow: 0px 3px 0px 0px rgba(48, 184, 125, 0.986);
+      box-shadow: 0px 3px 0px 0px rgba(48, 184, 125, 0.986);
+      &:hover {
+        background-color: #3feba0;
+      }
+    }
+  }
+}
+
+.error-msg {
+}
+
+@media screen and (min-width: 1500px) {
+  body {
+    background: url(../images/bg-intro-desktop.png) no-repeat center center
+      fixed $red;
+    background-size: cover;
+  }
+  .container {
+    flex-direction: row;
+    align-items: center;
+  }
+  .section-one {
+    flex: 1;
+    text-align: left;
+    h1 {
+      font-size: 6rem;
+      line-height: 1.2;
+    }
+    p {
+      font-size: 1.8rem;
+    }
+  }
+  .section-two {
+    flex: 1;
+    gap: 3rem;
+  }
+  .signup-form-section {
+    padding: 4rem;
+  }
+  .signup-form {
+    gap: 4rem;
+    input {
+      font-size: 1.7rem;
+      padding: 2rem 0 2rem 2rem;
+    }
+  }
+}

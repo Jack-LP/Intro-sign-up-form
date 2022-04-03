@@ -1,0 +1,21 @@
+// Imports
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+// Font
+$bodyFont: Poppins, sans-serif;
+
+$lightWeight: 400;
+$medWeight: 500;
+$heavyWeight: 600;
+$maxWeight: 700;
+
+$bodySize: 1.6rem;
+
+// Color
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+
+$blue: hsl(248, 32%, 49%);
+
+$darkBlue: hsl(249, 10%, 26%);
+$greyBlue: hsl(246, 25%, 77%);
